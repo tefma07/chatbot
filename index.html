@@ -1,0 +1,39 @@
+<textarea readonly id="p"></textarea><br>
+<input type="text" id="i"/>
+<button id="b" onclick="ss()">Göndər</button>
+<script>
+var b={"salam":"salam",
+"necəsən?":"yaxşıyam.sən necəsən?"}
+var ad=prompt("Adınızı daxil edin:")
+function ss(){
+var i=document.getElementById("i").value
+var i= i.toLowerCase()
+var z=b[i]
+document.getElementById("p").value+= ad+":"+i
+window.setTimeout(function(){document.getElementById("p").value += "\nBot:"+b[i]+"\n";}, 3000);
+document.getElementById("i").value=""
+}
+</script>
+<style>
+#p {
+	width: 50%;
+	resize: none;
+	height: 600px;
+	border: 1px solid black;
+	font-size: 20px;
+	font-family: times new roman;
+	outline: none;
+             border-radius:10px;
+background-color: grey;}
+#i {
+width: 40%;
+border-radius: 10px; }
+body{
+background-color: black; }
+#b {
+background-color: #4CAD50; 
+border-color: #4CAD50;
+border-radius: 10px; 
+width: 10%; }
+</style>
+
